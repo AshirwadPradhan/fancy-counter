@@ -11,6 +11,10 @@ function Card() {
   useEffect(() => {
     const handleKeydown = (e) => {
       if (e.code === "Space") {
+        if (count + 1 > 5) {
+          setCount(5);
+          return;
+        }
         setCount(count + 1);
       }
     };
